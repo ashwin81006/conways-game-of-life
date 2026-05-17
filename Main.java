@@ -4,7 +4,42 @@ public class Main {
 
     static int rows, cols;
 
-    
+    static int countneighbour(int grid[][],int r,int c)
+    {
+        int cc = 0;
+        if(grid[r-1][c-1]==1)
+            cc++;
+        if(grid[r-1][c]==1)
+            cc++;
+        if(grid[r-1][c+1]==1)
+            cc++;
+        if(grid[r][c-1]==1)
+            cc++;
+        if(grid[r][c+1]==1)
+            cc++;
+        if(grid[r+1][c-1]==1)
+            cc++;
+        if(grid[r+1][c]==1)
+            cc++;
+        if(grid[r+1][c+1]==1)
+            cc++;
+        return cc;
+    }
+
+    static void print(int grid[][])
+    {
+        for(int i = 0;i<rows;i++)
+        {
+            for(int j = 0;j<cols;j++)
+            {
+                if(grid[i][j] == 1)
+                    System.out.print("1 ");
+                else
+                    System.out.print("0 ");
+            }
+            System.out.println();
+        }
+    }
 
     public static void main(String args[]) throws Exception{
         Scanner in = new Scanner(System.in);
