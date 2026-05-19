@@ -23,3 +23,6 @@ A simple Java implementation of Conway's Game of Life using a terminal-based gri
 ```bash
 javac Main.java
 java Main
+```
+
+After running, provide the inputs and watch the simulation.
